@@ -1,0 +1,313 @@
+:root { 
+    --White: hsl(0, 0%, 100%);
+    --Light-Magenta: hsl(293, 100%, 63%);                /* Gradients */
+    --Light-Violet: hsl(264, 100%, 61%);                 /* Gradients */
+    --Light-Grayish-Violet: hsl(270, 20%, 96%);          /*app background */
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);  /*submit button background*/
+    --Very-Light-Magenta: hsl(289, 100%, 72%);           /*radio button outline*/
+}
+/* Start Global Rules  */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+}
+/* End Global Rules  */
+@media (min-width: 768px) {
+    .container {
+        width: 768px
+    }
+}
+
+@media (min-width: 962px) {
+    .container {
+        width: 962px
+    }
+}
+
+@media (min-width: 1200px) {
+    .container{
+        width:  1200px
+    }
+}
+section {
+    height: 100vh;
+}
+section .container {
+    position: relative;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    background-color: var(--White);
+    background-color: #fafafa
+}
+section .container .left {
+    position: absolute;
+    left: -50px;
+    background-image: linear-gradient(200deg, var(--Light-Magenta), var(--Light-Violet)30% );
+    width: 30%;
+    height: 550px;
+    border-bottom-right-radius: 300px;
+    border-bottom-left-radius: 200px;
+
+}
+@media (max-width: 375px) {
+    section .container .left {
+        width: 95%;
+        height: 55%;
+        left: -50%
+    }
+}
+section .container .right {
+    position: absolute;
+    background-color: var(--Light-Grayish-Violet);
+    width: 30%;
+    height: 550px;
+    bottom: 0;
+    right: -10%;
+    border-top-right-radius: 240px;
+    border-top-left-radius: 250px;
+}
+@media (max-width: 375px) {
+    section .container .right {
+        width: 95%;
+        height: 55%;
+        right: -50%
+    }
+}
+section .container .mobile {
+    z-index: 10;
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 200px;
+    height: 400px;
+    background-color: var(--White);
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: 15px 15px 20px 0px hsl(270deg 2% 85%)
+}
+@media (max-width: 375px) {
+    section .container .mobile {
+        transform: translate(0, -80%);
+    } 
+}
+section .container .mobile .mob-container {
+    background-color: var(--Light-Grayish-Violet);
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+section .container .mobile .mob-container .top{
+    width: 50%;
+    height: 20px;
+    background-color: var(--White);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -1px);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    z-index: 1;
+}
+section .container .mobile .mob-container .header {
+    width: 100%;
+    height: 15%;
+    background-image: linear-gradient(225deg, var(--Light-Magenta), var(--Light-Violet));
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: relative;
+    padding: 10px
+}
+section .container .mobile .mob-container .header .image {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 27px;
+    left: 25px;
+    border-radius: 50%;
+    background-color: var(--White)
+}
+section .container .mobile .mob-container .header .image img {
+    border-style: none;
+    width: 17px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+section .container .mobile .mob-container .header i:first-of-type {
+    color: white;
+    position: absolute;
+    top: 31px;
+    font-size: 10px;
+    left: 10px;
+}
+section .container .mobile .mob-container .header h3 {
+    position: absolute;
+    color: hsl(276, 100%, 81%);
+    font-size: 8px;
+    left: 55px;
+    top: 27px;
+    transform: translate(0, -80%)
+}
+section .container .mobile .mob-container .header p {
+    position: absolute;
+    color: hsl(276deg 100% 81% / 50%);
+    font-size: 5px;
+    top: 35px;
+    left: 55px;
+}
+section .container .mobile .mob-container .header i:last-of-type {
+    transform-origin: center right;
+    color: white;
+    font-size: 10px;
+    position: absolute;
+    right: 20px;
+    top: 31px;
+    transform: translate(0, 50%) rotate(90deg)
+}
+section .container .mobile .mob-container .chat {
+    padding: 10px
+}
+section .container .mobile .mob-container .chat .pragraph {
+    width: 72%;
+    background-color: hsl(270deg 6% 92%);
+    border-radius: 10px;
+    border-bottom-left-radius: 2px;
+    padding: 5px 10px;
+    margin-bottom: 5px
+}
+section .container .mobile .mob-container .chat .pragraph:nth-child(6) {
+    position: relative;
+    top: 45px;
+}
+section .container .mobile .mob-container .chat .pragraph p {
+    font-size: 7px;
+    margin: 0;
+    color: hsl(276, 55%, 52%);
+}
+section .container .mobile .mob-container .chat .pragraph2 {
+    position: relative;
+    top: 40px;
+    left: 42px;
+    background-color: var(--White);
+    width: 74%;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border-bottom-right-radius: 2px;
+    margin-bottom: 5px;
+}
+section .container .mobile .mob-container .chat .pragraph2:nth-child(5) {
+    bottom: 132px;
+    width: 48%;
+    left: 83px;
+}
+section .container .mobile .mob-container .chat .pragraph2 p {
+    font-size: 7px;
+    color: hsl(271, 15%, 43%);
+    margin: 0;
+}
+section .container .mobile .mob-container .images {
+    position: absolute;
+    right: 20px;
+    padding: 5px 0px;
+}
+section .container .mobile .mob-container div img {
+    width: 30px;
+    border-radius: 10px;
+}
+section .container .mobile .mob-container .chat .time {
+    position: relative;
+    bottom: -53px;
+    height: 25px;
+    width: 136px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(270deg, var(--Light-Magenta), var(--Light-Violet));
+    border-radius: 10px;
+    border-bottom-left-radius: 3px
+}
+section .container .mobile .mob-container .chat .time label {
+    font-size: 7px;
+    color: var(--White);
+    margin: auto 5px;
+}
+section .container .mobile .mob-container .chat .time label span {
+    font-size: 11px;
+    font-weight: 800;
+    margin-left: 20px
+}
+section .container .mobile .mob-container .chat .time:last-of-type label span {
+    margin-left: 33px;
+}
+section .container .mobile .mob-container .chat .typing {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    width: 160px;
+}
+section .container .mobile .mob-container .chat .typing input[type="text"] {
+    width: 160px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    background-color: var(--White);
+    color: hsl(206, 6%, 79%);
+    font-size: 10px;
+    padding: 10px;
+}
+section .container .mobile .mob-container .chat .typing input[type="submit"],
+section .container .mobile .mob-container .chat .typing .submit {
+    width: 30px;
+    height: 30px;
+    background-color: hsl(271, 36%, 24%);
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    position: absolute;
+    right: 0px;
+}
+section .container .mobile .mob-container .chat .typing i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var( --White)
+}
+section .container .text {
+    width: 360px;
+    position: absolute;
+    left: 55%;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 1;
+}
+@media (max-width: 375px) {
+    section .container .text {
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: calc(100% - 70px);
+        text-align: center;
+    }
+}
+section .container .text h2 {
+    color: hsl(271, 36%, 24%);
+    font-size: 35px;
+}
+section .container .text p {
+    font-size: 13px;
+    color: hsl(270, 7%, 64%);
+    line-height: 1.6;
+}
